@@ -1,18 +1,21 @@
-let arr = new Array();
-let arr1 = new Array();
-let j = 0;
-for (let i = 0; i < 10; i++)
-    arr[i] = prompt(`Введіть ${i + 1}-е число`);
-for (i = 0; i < arr.length; i++)
-    document.write(`${arr[i]} `);
-document.write(`<br>`);
-for (i = 9; i >= 0; i--) {
-    arr1[j] = arr[i];
-    j++;
+function Massiv() {
+    let newArray = new Array(2);
+    for (let i = 0; i < 3; i++) {
+        newArray [i] = new Array(2);
+        for (let j = 0; j < 3; j++) {
+            newArray [i] [j] = new Array(2);
+        }
+    }
 }
-j = 0;
-for (i = 0; i < 10; i++) {
-    arr[i] = arr1[j];
-    j++;
-    document.write(`${arr[i]} `);
+Massiv();
+arrayTable();
+function arrayTable (rows, cols, DefaultValue){
+var Mas = new Array (rows);
+for (var i = 0; i < rows; i++){
+    Mas [i] = new Array (cols);
+    for (var j=0; j < cols; j++){
+        Mas [i][j] = defaultValue;
+    }
+}
+return Mas;
 }
