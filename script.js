@@ -1,9 +1,29 @@
-function login_check(obj) {
-    let login=obj.login.value;
-    let login_pattern=/[0-9a-z]{3,32}/i;
-    let check=login_pattern.test(login);
-    if (check==true) {
-        alert("Логін введено правильно");
+let date = new Date;
+let hours = 0;
+let minutes = 0;
+let seconds = 0;
+let i = 0;
+let i2 = 0;
+function startTime() {
+    seconds++;
+    if (seconds > 59) {
+        seconds = 0;
+        minutes++;
+        i = 0;
     }
-    else alert("Е, ні, так діло не піде. Виправляй");
+    if (minutes  > 59) { 
+        hours++;
+        minutes = 0;
+    }
+    if (hours < 10 && i2 == 0) {
+        hours = "0" + hours;
+        i2 = 1;
+    }
+    if (minutes < 10 && i == 0) { 
+        minutes = "0" + minutes;
+        i = 1;
+    }
+    if (seconds < 10) seconds = "0" + seconds;
+    document.getElementById ( "time"). innerHTML = hours + ":" + minutes + ":" + seconds;
+    setTimeout (startTime, 10);
 }
