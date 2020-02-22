@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<Body onLoad = "startTime()">
-    <B> Час на сайті: <span id = "time"></span></b>
+<body>
+    <form action="sinus">
+        <p>Введіть число<br>
+        <input type="number" id="num"></p>
+        <p>Оберіть операцію:<br>
+        <select name="option" id="select">
+            <option value="1">Sin</option>
+            <option value="2" >Cos</option>
+        </select></p>
+        <input type="button" id="button" value="Розрахувати" onclick="Math1()">
+    </form>
     <script src="script.js"></script>
-  </Body>  
+</body>
 </html>

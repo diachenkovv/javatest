@@ -1,29 +1,14 @@
-let date = new Date;
-let hours = 0;
-let minutes = 0;
-let seconds = 0;
-let i = 0;
-let i2 = 0;
-function startTime() {
-    seconds++;
-    if (seconds > 59) {
-        seconds = 0;
-        minutes++;
-        i = 0;
+function Math1() {
+    let select = document.getElementById("select");
+    let number = document.getElementById("num").value;
+    let value = select.options[select.selectedIndex].value;
+    let res = 0;
+    if (value == 1) {
+        res = Math.sin(number);
     }
-    if (minutes  > 59) { 
-        hours++;
-        minutes = 0;
+    else {
+        res = Math.cos(number);
     }
-    if (hours < 10 && i2 == 0) {
-        hours = "0" + hours;
-        i2 = 1;
-    }
-    if (minutes < 10 && i == 0) { 
-        minutes = "0" + minutes;
-        i = 1;
-    }
-    if (seconds < 10) seconds = "0" + seconds;
-    document.getElementById ( "time"). innerHTML = hours + ":" + minutes + ":" + seconds;
-    setTimeout (startTime, 10);
+
+    alert(res);
 }
