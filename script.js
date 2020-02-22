@@ -1,6 +1,6 @@
 function login_check(obj) {
     let login=obj.login.value;
-    let login_pattern=/[0-9a-z]+/i;
+    let login_pattern=/[0-9a-z]{3,32}/i;
     let check=login_pattern.test(login);
     if (check==true) {
         alert("Логін введено правильно");
