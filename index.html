@@ -1,11 +1,21 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-    <img id="img"src="img.jpg" width="100" onMouseOver="scale()">
-    
-    <img id="img2" src="img2.jpg" width="100" onClick="scale1()">   <script src="style.js"></script>
-    
+    <form name="login_pass">
+        <p>Логін:<br>
+            <input type="text" name="login"><br>
+            </p>
+        <p>Пароль:<br>
+            <input type="password" name="pass"><br>
+        </p>
+        <input type="button" value="Перевірити" onclick="login_check(login_pass);">
+    </form><br>
+<script src="script.js"></script>
+<a href="test.html">Альтернативне рішення</a>
 </body>
+</html>
