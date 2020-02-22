@@ -6,16 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="sinus">
-        <p>Введіть число<br>
-        <input type="number" id="num"></p>
-        <p>Оберіть операцію:<br>
-        <select name="option" id="select">
-            <option value="1">Sin</option>
-            <option value="2" >Cos</option>
-        </select></p>
-        <input type="button" id="button" value="Розрахувати" onclick="Math1()">
+    <form>
+        <p>
+            <label for="date">Дата народження: </label>
+            <input type="text" id="text" name="text"/>
+        </p>
+        <p>
+            <button type="button" onclick="chechData()">Отправить</button>
+        </p>
     </form>
+    <b> И так:<span id="text"></span></b>
     <script src="script.js"></script>
 </body>
 </html>
